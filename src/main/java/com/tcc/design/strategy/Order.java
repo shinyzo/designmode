@@ -15,6 +15,9 @@ public class Order {
 
     private BigDecimal amount;
 
+    public Order() {
+    }
+
     public String getOrderId() {
         return orderId;
     }
