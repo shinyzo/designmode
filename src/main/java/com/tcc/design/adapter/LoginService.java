@@ -18,9 +18,6 @@ public class LoginService {
         Member member = new Member();
         member.setMemberName(username);
         member.setMemberId(UUID.randomUUID().toString());
-        if(password == null){
-            password = UUID.randomUUID().toString();
-        }
         member.setPassword(password);
         memberMap.put(member.getMemberId(),member);
 

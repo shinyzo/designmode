@@ -11,7 +11,6 @@ public class Login4TelAdapter extends AbstractThirdLoginService{
 
     @Override
     public Member register(String phone, String code) {
-
         if(checkCode(code)){
             return super.register(phone);
         }else{
