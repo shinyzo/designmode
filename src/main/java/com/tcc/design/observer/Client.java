@@ -12,6 +12,6 @@ public class Client {
 
         IObserver observer = new StudentObserver();
         teacher.add(observer);
-        teacher.coming();
+        teacher.dosomething();
     }
 }

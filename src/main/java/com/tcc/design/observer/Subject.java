@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: zhangliangming
  * @Date: 2021/3/4 21:49.
- * Description:
+ * Description: 观察者
  */
 public class Subject {
 
@@ -20,14 +20,16 @@ public class Subject {
         observerList.remove(observer);
     }
 
-    public void watch(){
+    // 通知观察者
+    public void notice(){
         for(IObserver observer:observerList){
             observer.notice();
         }
     }
 
-    public void coming(){
-        watch();
+    // 被观察者举动
+    public void dosomething(){
+        notice();
     }
 
 }

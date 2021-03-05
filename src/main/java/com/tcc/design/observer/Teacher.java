@@ -8,9 +8,8 @@ package com.tcc.design.observer;
 public class Teacher extends Subject {
 
     @Override
-    public void coming() {
+    public void dosomething() {
         System.out.println("老师来了");
-        super.coming();
-
+        super.dosomething();
     }
 }
