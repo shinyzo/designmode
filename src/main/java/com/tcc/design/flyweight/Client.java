@@ -15,6 +15,7 @@ public class Client {
         IFlyWeight flyWeight1 = FlyWeightFactory.getFlyWeight("bb");
         flyWeight1.operator();
 
-
     }
+
+
 }
