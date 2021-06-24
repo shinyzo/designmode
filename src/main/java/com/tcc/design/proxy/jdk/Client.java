@@ -17,21 +17,20 @@ public class Client {
 
     public static void main(String[] args)throws Exception{
 
-//        JdkProxyHandler jdkProxyHandler = new JdkProxyHandler();
-//        ISubject proxy = jdkProxyHandler.getInstance(new RealSubject());
-//        proxy.request();
+        IHouse proxy = SubjectProxy.getInstance(new HaijingHouse());
+        proxy.findHouse();
 
-        F58Proxy f58Proxy = new F58Proxy();
-        IHouse houseProxy = f58Proxy.getHouseProxy(new HaijingHouse()); // 代理对象
-        System.out.println(houseProxy.getClass());
-        houseProxy.findHouse();
-
-
-        // 从内存获取代理类
-        byte[] bytes =  ProxyGenerator.generateProxyClass("$Proxy0",new Class[]{IHouse.class});
-        FileOutputStream fileOutputStream = new FileOutputStream("$Proxy0.class");
-        fileOutputStream.write(bytes);
-        fileOutputStream.close();
+//        F58Proxy f58Proxy = new F58Proxy();
+//        IHouse houseProxy = f58Proxy.getHouseProxy(new HaijingHouse()); // 代理对象
+//        System.out.println(houseProxy.getClass());
+//        houseProxy.findHouse();
+//
+//
+//        // 从内存获取代理类
+//        byte[] bytes =  ProxyGenerator.generateProxyClass("$Proxy0",new Class[]{IHouse.class});
+//        FileOutputStream fileOutputStream = new FileOutputStream("$Proxy0.class");
+//        fileOutputStream.write(bytes);
+//        fileOutputStream.close();
 
     }
 

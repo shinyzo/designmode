@@ -14,13 +14,12 @@ import java.lang.reflect.Proxy;
  */
 public class JdkProxyHandler implements InvocationHandler {
 
-    private ISubject target;
+    private Object target;
 
-    public ISubject getInstance(ISubject subject){
-        this.target = subject;
-        Class clazz = target.getClass();
-        return (ISubject) Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);
+    public JdkProxyHandler(Object target) {
+        this.target = target;
     }
+
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         before();
